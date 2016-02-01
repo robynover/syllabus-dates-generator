@@ -1,0 +1,42 @@
+<form method="post" action="/process">
+	<label>Start Date</label>
+	<div class="container">
+	    <div class="row">
+	        <div class='col-sm-6'>
+	            <div class="form-group">
+	                <div class='input-group date' id='datetimepicker1'>
+	                    <input type='text' class="form-control" name="date"/>
+	                    <span class="input-group-addon">
+	                        <span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                </div>
+	            </div>
+	        </div>
+	        <script type="text/javascript">
+	            $(function () {
+	                $('#datetimepicker1').datetimepicker({
+		                inline: false,
+		                format: 'YYYY/MM/DD'
+		            });
+	            });
+	        </script>
+	    </div>
+	</div>
+
+	<label>Days of week class meets</label><br/>
+	<div class="checkbox">
+		<input type="checkbox" name="dayweek" value="1">Monday<br>
+	  	<input type="checkbox" name="dayweek" value="2">Tuesday<br>
+	  	<input type="checkbox" name="dayweek" value="3">Wednesday<br>
+	  	<input type="checkbox" name="dayweek" value="4">Thursday<br>
+	  	<input type="checkbox" name="dayweek" value="5">Friday<br>
+	  	<input type="checkbox" name="dayweek" value="6">Saturday<br>
+	  	<input type="checkbox" name="dayweek" value="0">Sunday<br>
+	</div>
+
+	<label>Number of weeks</label><br/>
+	<input type="text" name="numweeks" class="form-control num" />
+
+
+	<p><input type="submit" class="btn btn-default"/></p>
+</form>
