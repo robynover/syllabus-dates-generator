@@ -24,13 +24,9 @@ function outputDates (startDateText,daysOfWeek,numWeeks) {
 		var week = [];
 		if (typeof daysOfWeek === "object"){	
 			daysOfWeek.forEach(function(dayNum){
-				//var myDay= moment().week(weekOfYear+i).day(dayNum);
-				//week.push(myDay.format("ddd MMM D, YYYY"));
 				fillWeek(weekOfYear+i,dayNum,week);
 			});
 		} else {
-			//var myDay= moment().week(weekOfYear+i).day(daysOfWeek);
-			//week.push(myDay.format("ddd MMM D, YYYY"));
 			fillWeek(weekOfYear+i,daysOfWeek,week);
 		}
 		
